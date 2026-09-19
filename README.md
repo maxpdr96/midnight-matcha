@@ -8,13 +8,13 @@ A dark Obsidian theme built around deep matcha greens and honey-toned text. Low 
 
 | Role | Color |
 |---|---|
-| Background | `#101b17` |
-| Surface | `#23372b` |
-| Matcha | `#183e2d` |
-| Foam (accent) | `#3c835d` · `#549e6a` |
-| Mist | `#acd4cf` |
-| Cream (text) | `#d6d5bc` · `#e5e2d1` |
-| Honey (highlight) | `#f7e8b2` |
+| Background | `#101b19` |
+| Surface | `#22382e` |
+| Matcha | `#164033` |
+| Foam (accent) | `#398667` · `#51a173` |
+| Mist | `#aad5d6` |
+| Cream (text) | `#e6e5d0` |
+| Honey (highlight) | `#faf3af` |
 
 ## Install
 
@@ -22,9 +22,6 @@ A dark Obsidian theme built around deep matcha greens and honey-toned text. Low 
 
 **Manually:** copy `theme.css` and `manifest.json` into `<vault>/.obsidian/themes/Midnight Matcha/`, then pick the theme in Settings → Appearance.
 
-## Credits
-
-The core palette is based on the [Osaka Jade](https://github.com/craftzdog/osaka-jade) color scheme, expanded and adapted for Obsidian: extra surface tones, honey-toned text and adjusted contrast for reading.
 
 ## License
 
