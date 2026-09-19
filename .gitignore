@@ -1,1 +1,9 @@
 .DS_Store
+.claude/
+.codex/
+.agents/
+.cursor/
+.aider*
+CLAUDE.md
+AGENTS.md
+.env
