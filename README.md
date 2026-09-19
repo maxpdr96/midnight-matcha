@@ -4,7 +4,7 @@ A dark Obsidian theme built around deep matcha greens and honey-toned text. Low 
 
 **Dark**
 
-![Midnight Matcha in dark mode](screenshot.png)
+![Midnight Matcha in dark mode](preview.png)
 
 **Light**
 
