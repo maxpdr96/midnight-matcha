@@ -48,137 +48,137 @@ body {
   --color-base-70: #aad5d6;
   --color-base-100: #d4d7bb;
 
-  --oj-bg-deep: #0c1513;
-  --oj-bg: #101b19;
-  --oj-bg-raised: #12211d;
-  --oj-bg-soft: #172621;
-  --oj-border: #22382e;
-  --oj-border-strong: #31483e;
-  --oj-muted: #80a19a;
-  --oj-text: #d4d7bb;
-  --oj-cream: #faf3af;
-  --oj-jade: #51a173;
-  --oj-jade-bright: #60b384;
-  --oj-aqua: #72bcbe;
-  --oj-cyan: #26dcd4;
-  --oj-yellow: #ece52f;
-  --oj-pink: #d6648d;
-  --oj-brown: #a57f48;
-  --oj-red: #ff6c45;
+  --mm-bg-deep: #0c1513;
+  --mm-bg: #101b19;
+  --mm-bg-raised: #12211d;
+  --mm-bg-soft: #172621;
+  --mm-border: #22382e;
+  --mm-border-strong: #31483e;
+  --mm-muted: #80a19a;
+  --mm-text: #d4d7bb;
+  --mm-cream: #faf3af;
+  --mm-jade: #51a173;
+  --mm-jade-bright: #60b384;
+  --mm-aqua: #72bcbe;
+  --mm-cyan: #26dcd4;
+  --mm-yellow: #ece52f;
+  --mm-pink: #d6648d;
+  --mm-brown: #a57f48;
+  --mm-red: #ff6c45;
   --tooltip-background: #22382e;
   --tooltip-text: #faf3af;
 
-  --background-primary: var(--oj-bg);
-  --background-primary-alt: var(--oj-bg-raised);
-  --background-secondary: var(--oj-bg-deep);
-  --background-secondary-alt: var(--oj-bg-soft);
-  --background-modifier-border: var(--oj-border);
-  --background-modifier-border-hover: var(--oj-border-strong);
-  --background-modifier-border-focus: var(--oj-jade);
+  --background-primary: var(--mm-bg);
+  --background-primary-alt: var(--mm-bg-raised);
+  --background-secondary: var(--mm-bg-deep);
+  --background-secondary-alt: var(--mm-bg-soft);
+  --background-modifier-border: var(--mm-border);
+  --background-modifier-border-hover: var(--mm-border-strong);
+  --background-modifier-border-focus: var(--mm-jade);
   --background-modifier-hover: rgba(117, 187, 179, 0.08);
   --background-modifier-active-hover: rgba(84, 158, 106, 0.16);
-  --background-modifier-form-field: var(--oj-bg-deep);
-  --background-modifier-form-field-highlighted: var(--oj-bg-soft);
+  --background-modifier-form-field: var(--mm-bg-deep);
+  --background-modifier-form-field-highlighted: var(--mm-bg-soft);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.38);
   --background-modifier-error: rgba(255, 83, 69, 0.16);
   --background-modifier-error-hover: rgba(255, 83, 69, 0.24);
   --background-modifier-success: rgba(84, 158, 106, 0.2);
   --background-modifier-message: rgba(12, 21, 18, 0.92);
 
-  --text-normal: var(--oj-text);
-  --text-muted: var(--oj-muted);
+  --text-normal: var(--mm-text);
+  --text-muted: var(--mm-muted);
   --text-faint: #52695e;
-  --text-on-accent: var(--oj-bg-deep);
-  --text-on-accent-inverted: var(--oj-cream);
-  --text-error: var(--oj-red);
-  --text-success: var(--oj-jade-bright);
-  --text-warning: var(--oj-yellow);
-  --text-accent: var(--oj-aqua);
-  --text-accent-hover: var(--oj-cyan);
+  --text-on-accent: var(--mm-bg-deep);
+  --text-on-accent-inverted: var(--mm-cream);
+  --text-error: var(--mm-red);
+  --text-success: var(--mm-jade-bright);
+  --text-warning: var(--mm-yellow);
+  --text-accent: var(--mm-aqua);
+  --text-accent-hover: var(--mm-cyan);
   --text-selection: rgba(84, 158, 106, 0.34);
   --text-highlight-bg: rgba(229, 199, 54, 0.24);
   --text-highlight-bg-active: rgba(229, 199, 54, 0.36);
 
-  --interactive-normal: var(--oj-bg-soft);
-  --interactive-hover: var(--oj-bg-soft);
-  --interactive-accent: var(--oj-jade);
-  --interactive-accent-hover: var(--oj-jade-bright);
+  --interactive-normal: var(--mm-bg-soft);
+  --interactive-hover: var(--mm-bg-soft);
+  --interactive-accent: var(--mm-jade);
+  --interactive-accent-hover: var(--mm-jade-bright);
   --interactive-accent-rgb: 84, 158, 106;
-  --interactive-success: var(--oj-jade-bright);
+  --interactive-success: var(--mm-jade-bright);
 
-  --icon-color: var(--oj-muted);
-  --icon-color-hover: var(--oj-cream);
-  --icon-color-active: var(--oj-cyan);
-  --icon-color-focused: var(--oj-aqua);
+  --icon-color: var(--mm-muted);
+  --icon-color-hover: var(--mm-cream);
+  --icon-color-active: var(--mm-cyan);
+  --icon-color-focused: var(--mm-aqua);
 
-  --titlebar-background: var(--oj-bg-deep);
-  --titlebar-background-focused: var(--oj-bg-deep);
-  --ribbon-background: var(--oj-bg-deep);
-  --divider-color: var(--oj-border);
-  --divider-color-hover: var(--oj-jade);
-  --tab-container-background: var(--oj-bg-deep);
-  --tab-text-color: var(--oj-muted);
-  --tab-text-color-active: var(--oj-cream);
-  --tab-text-color-focused: var(--oj-text);
-  --tab-text-color-focused-active: var(--oj-cream);
-  --tab-outline-color: var(--oj-border);
+  --titlebar-background: var(--mm-bg-deep);
+  --titlebar-background-focused: var(--mm-bg-deep);
+  --ribbon-background: var(--mm-bg-deep);
+  --divider-color: var(--mm-border);
+  --divider-color-hover: var(--mm-jade);
+  --tab-container-background: var(--mm-bg-deep);
+  --tab-text-color: var(--mm-muted);
+  --tab-text-color-active: var(--mm-cream);
+  --tab-text-color-focused: var(--mm-text);
+  --tab-text-color-focused-active: var(--mm-cream);
+  --tab-outline-color: var(--mm-border);
 
-  --nav-item-color: var(--oj-muted);
-  --nav-item-color-hover: var(--oj-text);
-  --nav-item-color-active: var(--oj-cream);
+  --nav-item-color: var(--mm-muted);
+  --nav-item-color-hover: var(--mm-text);
+  --nav-item-color-active: var(--mm-cream);
   --nav-item-background-hover: rgba(117, 187, 179, 0.07);
   --nav-item-background-active: rgba(84, 158, 106, 0.14);
   --nav-collapse-icon-color: #52695e;
   --nav-collapse-icon-color-collapsed: #52695e;
-  --nav-indentation-guide-color: var(--oj-border);
+  --nav-indentation-guide-color: var(--mm-border);
 
   --link-color: #5ea4dc;
   --link-color-hover: #8accf4;
   --link-external-color: #bd88db;
   --link-external-color-hover: #dba8ed;
-  --link-unresolved-color: var(--oj-pink);
+  --link-unresolved-color: var(--mm-pink);
   --link-unresolved-opacity: 0.8;
   --link-unresolved-decoration-color: rgba(210, 104, 156, 0.5);
 
   /* Heading spectrum: cream, jade, cyan, ume, gold and warm earth. */
-  --h1-color: var(--oj-cream);
-  --h2-color: var(--oj-jade-bright);
-  --h3-color: var(--oj-cyan);
-  --h4-color: var(--oj-pink);
-  --h5-color: var(--oj-yellow);
-  --h6-color: var(--oj-brown);
-  --bold-color: var(--oj-cream);
+  --h1-color: var(--mm-cream);
+  --h2-color: var(--mm-jade-bright);
+  --h3-color: var(--mm-cyan);
+  --h4-color: var(--mm-pink);
+  --h5-color: var(--mm-yellow);
+  --h6-color: var(--mm-brown);
+  --bold-color: var(--mm-cream);
   --italic-color: #aad5d6;
   --tag-color: #dbaa5e;
-  --tag-color-hover: var(--oj-cream);
+  --tag-color-hover: var(--mm-cream);
   --tag-background: rgba(162, 115, 75, 0.16);
   --tag-background-hover: rgba(214, 154, 99, 0.25);
   --inline-title-color: #aad5d6;
 
   --code-normal: #aad5d6;
-  --code-background: var(--oj-bg-deep);
+  --code-background: var(--mm-bg-deep);
   --code-comment: #7fbab1;
-  --code-function: var(--oj-jade-bright);
-  --code-important: var(--oj-red);
-  --code-keyword: var(--oj-pink);
+  --code-function: var(--mm-jade-bright);
+  --code-important: var(--mm-red);
+  --code-keyword: var(--mm-pink);
   --code-operator: #bcc695;
-  --code-property: var(--oj-cream);
-  --code-punctuation: var(--oj-muted);
-  --code-string: var(--oj-jade);
-  --code-tag: var(--oj-cyan);
-  --code-value: var(--oj-brown);
+  --code-property: var(--mm-cream);
+  --code-punctuation: var(--mm-muted);
+  --code-string: var(--mm-jade);
+  --code-tag: var(--mm-cyan);
+  --code-value: var(--mm-brown);
 
-  --blockquote-border-color: var(--oj-jade);
+  --blockquote-border-color: var(--mm-jade);
   --blockquote-color: #aad5d6;
-  --hr-color: var(--oj-border-strong);
-  --checkbox-color: var(--oj-jade);
-  --checkbox-color-hover: var(--oj-jade-bright);
-  --checkbox-border-color: var(--oj-muted);
-  --checkbox-marker-color: var(--oj-bg-deep);
-  --list-marker-color: var(--oj-jade);
-  --list-marker-color-hover: var(--oj-cyan);
-  --list-marker-color-collapsed: var(--oj-yellow);
-  --table-header-background: var(--oj-bg-soft);
+  --hr-color: var(--mm-border-strong);
+  --checkbox-color: var(--mm-jade);
+  --checkbox-color-hover: var(--mm-jade-bright);
+  --checkbox-border-color: var(--mm-muted);
+  --checkbox-marker-color: var(--mm-bg-deep);
+  --list-marker-color: var(--mm-jade);
+  --list-marker-color-hover: var(--mm-cyan);
+  --list-marker-color-collapsed: var(--mm-yellow);
+  --table-header-background: var(--mm-bg-soft);
   --table-header-background-hover: #1c312a;
   --table-row-alt-background: rgba(24, 37, 31, 0.55);
   --table-row-background-hover: rgba(84, 158, 106, 0.08);
@@ -186,23 +186,23 @@ body {
   --scrollbar-bg: transparent;
   --scrollbar-thumb-bg: #22382e;
   --scrollbar-active-thumb-bg: #31483e;
-  --indentation-guide-color: var(--oj-border);
-  --indentation-guide-color-active: var(--oj-jade);
+  --indentation-guide-color: var(--mm-border);
+  --indentation-guide-color-active: var(--mm-jade);
 
   --graph-line: #31483e;
-  --graph-node: var(--oj-jade);
-  --graph-node-focused: var(--oj-cream);
-  --graph-node-tag: var(--oj-yellow);
-  --graph-node-attachment: var(--oj-pink);
-  --graph-node-unresolved: var(--oj-red);
+  --graph-node: var(--mm-jade);
+  --graph-node-focused: var(--mm-cream);
+  --graph-node-tag: var(--mm-yellow);
+  --graph-node-attachment: var(--mm-pink);
+  --graph-node-unresolved: var(--mm-red);
 
-  --oj-mermaid-canvas: #101b19;
-  --oj-mermaid-node-bg: #172621;
-  --oj-mermaid-node-border: #51a173;
-  --oj-mermaid-node-text: #faf3af;
-  --oj-mermaid-line: #80a19a;
-  --oj-mermaid-accent: #72bcbe;
-  --oj-mermaid-label-bg: #12211d;
+  --mm-mermaid-canvas: #101b19;
+  --mm-mermaid-node-bg: #172621;
+  --mm-mermaid-node-border: #51a173;
+  --mm-mermaid-node-text: #faf3af;
+  --mm-mermaid-line: #80a19a;
+  --mm-mermaid-accent: #72bcbe;
+  --mm-mermaid-label-bg: #12211d;
 }
 
 /* A warm paper companion for users who switch Obsidian to light mode. */
@@ -344,13 +344,13 @@ body {
   --graph-node-attachment: #a74365;
   --graph-node-unresolved: #c34729;
 
-  --oj-mermaid-canvas: #eeefdb;
-  --oj-mermaid-node-bg: #dfe6d4;
-  --oj-mermaid-node-border: #398667;
-  --oj-mermaid-node-text: #164033;
-  --oj-mermaid-line: #587168;
-  --oj-mermaid-accent: #20766f;
-  --oj-mermaid-label-bg: #f4f3de;
+  --mm-mermaid-canvas: #eeefdb;
+  --mm-mermaid-node-bg: #dfe6d4;
+  --mm-mermaid-node-border: #398667;
+  --mm-mermaid-node-text: #164033;
+  --mm-mermaid-line: #587168;
+  --mm-mermaid-accent: #20766f;
+  --mm-mermaid-label-bg: #f4f3de;
 }
 
 /* Quiet chrome with a thin jade signal for the current context. */
@@ -848,32 +848,32 @@ body.theme-dark .mermaid > svg {
 }
 
 .theme-dark .mermaid {
-  --oj-mermaid-canvas: #101b19;
-  --oj-mermaid-node-bg: #172621;
-  --oj-mermaid-node-border: #51a173;
-  --oj-mermaid-node-text: #faf3af;
-  --oj-mermaid-line: #80a19a;
-  --oj-mermaid-accent: #72bcbe;
-  --oj-mermaid-label-bg: #12211d;
+  --mm-mermaid-canvas: #101b19;
+  --mm-mermaid-node-bg: #172621;
+  --mm-mermaid-node-border: #51a173;
+  --mm-mermaid-node-text: #faf3af;
+  --mm-mermaid-line: #80a19a;
+  --mm-mermaid-accent: #72bcbe;
+  --mm-mermaid-label-bg: #12211d;
 }
 
 .theme-light .mermaid {
-  --oj-mermaid-canvas: #eeefdb;
-  --oj-mermaid-node-bg: #dfe6d4;
-  --oj-mermaid-node-border: #398667;
-  --oj-mermaid-node-text: #164033;
-  --oj-mermaid-line: #587168;
-  --oj-mermaid-accent: #20766f;
-  --oj-mermaid-label-bg: #f4f3de;
+  --mm-mermaid-canvas: #eeefdb;
+  --mm-mermaid-node-bg: #dfe6d4;
+  --mm-mermaid-node-border: #398667;
+  --mm-mermaid-node-text: #164033;
+  --mm-mermaid-line: #587168;
+  --mm-mermaid-accent: #20766f;
+  --mm-mermaid-label-bg: #f4f3de;
 }
 
 body .mermaid {
   width: 100%;
   margin-block: 1em;
   padding: 1em;
-  border: 1px solid color-mix(in srgb, var(--oj-mermaid-node-border) 30%, var(--background-modifier-border));
+  border: 1px solid color-mix(in srgb, var(--mm-mermaid-node-border) 30%, var(--background-modifier-border));
   border-radius: var(--radius-l);
-  background: var(--oj-mermaid-canvas);
+  background: var(--mm-mermaid-canvas);
   overflow: hidden;
 }
 
@@ -893,8 +893,8 @@ body .mermaid .node path,
 body .mermaid rect.actor,
 body .mermaid g.actor rect,
 body .mermaid .note {
-  fill: var(--oj-mermaid-node-bg) !important;
-  stroke: var(--oj-mermaid-node-border) !important;
+  fill: var(--mm-mermaid-node-bg) !important;
+  stroke: var(--mm-mermaid-node-border) !important;
 }
 
 body .mermaid .nodeLabel,
@@ -908,19 +908,19 @@ body .mermaid .noteText,
 body .mermaid .messageText,
 body .mermaid .messageText tspan,
 body .mermaid .loopText {
-  color: var(--oj-mermaid-node-text) !important;
-  fill: var(--oj-mermaid-node-text) !important;
+  color: var(--mm-mermaid-node-text) !important;
+  fill: var(--mm-mermaid-node-text) !important;
 }
 
 body .mermaid .edgeLabel,
 body .mermaid .edgeLabel p {
-  color: var(--oj-mermaid-node-text) !important;
-  background: var(--oj-mermaid-label-bg) !important;
+  color: var(--mm-mermaid-node-text) !important;
+  background: var(--mm-mermaid-label-bg) !important;
 }
 
 body .mermaid .edgeLabel rect,
 body .mermaid .labelBkg {
-  fill: var(--oj-mermaid-label-bg) !important;
+  fill: var(--mm-mermaid-label-bg) !important;
   opacity: 0.96 !important;
 }
 
@@ -930,28 +930,28 @@ body .mermaid .messageLine0,
 body .mermaid .messageLine1,
 body .mermaid .actor-line,
 body .mermaid .loopLine {
-  stroke: var(--oj-mermaid-line) !important;
+  stroke: var(--mm-mermaid-line) !important;
 }
 
 body .mermaid marker path,
 body .mermaid .arrowheadPath {
-  fill: var(--oj-mermaid-line) !important;
-  stroke: var(--oj-mermaid-line) !important;
+  fill: var(--mm-mermaid-line) !important;
+  stroke: var(--mm-mermaid-line) !important;
 }
 
 body .mermaid .activation0,
 body .mermaid .activation1,
 body .mermaid .activation2 {
-  fill: color-mix(in srgb, var(--oj-mermaid-accent) 16%, var(--oj-mermaid-node-bg)) !important;
-  stroke: var(--oj-mermaid-accent) !important;
+  fill: color-mix(in srgb, var(--mm-mermaid-accent) 16%, var(--mm-mermaid-node-bg)) !important;
+  stroke: var(--mm-mermaid-accent) !important;
 }
 
 body .mermaid .actor-man circle,
 body .mermaid .actor-man line,
 body .mermaid circle.actor-man,
 body .mermaid line.actor-man {
-  fill: var(--oj-mermaid-node-bg) !important;
-  stroke: var(--oj-mermaid-node-border) !important;
+  fill: var(--mm-mermaid-node-bg) !important;
+  stroke: var(--mm-mermaid-node-border) !important;
 }
 
 /* Number glyphs sit on filled markers, not on the diagram canvas. */

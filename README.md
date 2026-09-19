@@ -2,7 +2,13 @@
 
 A dark Obsidian theme built around deep matcha greens and honey-toned text. Low contrast on purpose, so long reading and note-taking sessions at night stay comfortable.
 
-![Midnight Matcha](screenshot.png)
+**Dark**
+
+![Midnight Matcha in dark mode](screenshot.png)
+
+**Light**
+
+![Midnight Matcha in light mode](screenshot-light.png)
 
 ## Palette
 
@@ -15,6 +21,8 @@ A dark Obsidian theme built around deep matcha greens and honey-toned text. Low 
 | Mist | `#aad5d6` |
 | Cream (text) | `#e6e5d0` |
 | Honey (highlight) | `#faf3af` |
+
+Both light and dark modes are supported.
 
 ## Install
 
