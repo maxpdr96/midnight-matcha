@@ -1,0 +1,1470 @@
+/*
+ * Midnight Matcha for Obsidian
+ * Deep matcha greens with honey-toned text; low contrast for long reading at night.
+ */
+
+body {
+  --font-interface-theme: "Inter", "Noto Sans", system-ui, sans-serif;
+  --font-text-theme: "Noto Sans", "Inter", system-ui, sans-serif;
+  --font-monospace-theme: "JetBrains Mono", "Fira Code", monospace;
+
+  --radius-s: 4px;
+  --radius-m: 7px;
+  --radius-l: 10px;
+  --input-radius: 6px;
+  --tab-radius-active: 7px 7px 0 0;
+  --checkbox-radius: 4px;
+
+  --h1-size: 1.85em;
+  --h2-size: 1.55em;
+  --h3-size: 1.32em;
+  --h4-size: 1.16em;
+  --h5-size: 1.04em;
+  --h6-size: 0.94em;
+  --h1-weight: 720;
+  --h2-weight: 680;
+  --h3-weight: 650;
+  --h4-weight: 620;
+  --h5-weight: 600;
+  --h6-weight: 600;
+
+  --line-height-normal: 1.65;
+  --line-height-tight: 1.3;
+  --file-line-width: 860px;
+}
+
+/* Midnight Matcha's native dark palette. */
+.theme-dark {
+  --color-base-00: #0c1512;
+  --color-base-05: #101b17;
+  --color-base-10: #13201b;
+  --color-base-20: #18251f;
+  --color-base-25: #1d2d25;
+  --color-base-30: #23372b;
+  --color-base-35: #2a4034;
+  --color-base-40: #32473b;
+  --color-base-50: #53685b;
+  --color-base-60: #81a095;
+  --color-base-70: #acd4cf;
+  --color-base-100: #d6d5bc;
+
+  --oj-bg-deep: #0c1512;
+  --oj-bg: #101b17;
+  --oj-bg-raised: #13201b;
+  --oj-bg-soft: #18251f;
+  --oj-border: #23372b;
+  --oj-border-strong: #32473b;
+  --oj-muted: #81a095;
+  --oj-text: #d6d5bc;
+  --oj-cream: #f7e8b2;
+  --oj-jade: #549e6a;
+  --oj-jade-bright: #63b07a;
+  --oj-aqua: #75bbb3;
+  --oj-cyan: #2dd5b7;
+  --oj-yellow: #e5c736;
+  --oj-pink: #d2689c;
+  --oj-brown: #a2734b;
+  --oj-red: #ff5345;
+  --tooltip-background: #23372b;
+  --tooltip-text: #f7e8b2;
+
+  --background-primary: var(--oj-bg);
+  --background-primary-alt: var(--oj-bg-raised);
+  --background-secondary: var(--oj-bg-deep);
+  --background-secondary-alt: var(--oj-bg-soft);
+  --background-modifier-border: var(--oj-border);
+  --background-modifier-border-hover: var(--oj-border-strong);
+  --background-modifier-border-focus: var(--oj-jade);
+  --background-modifier-hover: rgba(117, 187, 179, 0.08);
+  --background-modifier-active-hover: rgba(84, 158, 106, 0.16);
+  --background-modifier-form-field: var(--oj-bg-deep);
+  --background-modifier-form-field-highlighted: var(--oj-bg-soft);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.38);
+  --background-modifier-error: rgba(255, 83, 69, 0.16);
+  --background-modifier-error-hover: rgba(255, 83, 69, 0.24);
+  --background-modifier-success: rgba(84, 158, 106, 0.2);
+  --background-modifier-message: rgba(12, 21, 18, 0.92);
+
+  --text-normal: var(--oj-text);
+  --text-muted: var(--oj-muted);
+  --text-faint: #53685b;
+  --text-on-accent: var(--oj-bg-deep);
+  --text-on-accent-inverted: var(--oj-cream);
+  --text-error: var(--oj-red);
+  --text-success: var(--oj-jade-bright);
+  --text-warning: var(--oj-yellow);
+  --text-accent: var(--oj-aqua);
+  --text-accent-hover: var(--oj-cyan);
+  --text-selection: rgba(84, 158, 106, 0.34);
+  --text-highlight-bg: rgba(229, 199, 54, 0.24);
+  --text-highlight-bg-active: rgba(229, 199, 54, 0.36);
+
+  --interactive-normal: var(--oj-bg-soft);
+  --interactive-hover: var(--oj-bg-soft);
+  --interactive-accent: var(--oj-jade);
+  --interactive-accent-hover: var(--oj-jade-bright);
+  --interactive-accent-rgb: 84, 158, 106;
+  --interactive-success: var(--oj-jade-bright);
+
+  --icon-color: var(--oj-muted);
+  --icon-color-hover: var(--oj-cream);
+  --icon-color-active: var(--oj-cyan);
+  --icon-color-focused: var(--oj-aqua);
+
+  --titlebar-background: var(--oj-bg-deep);
+  --titlebar-background-focused: var(--oj-bg-deep);
+  --ribbon-background: var(--oj-bg-deep);
+  --divider-color: var(--oj-border);
+  --divider-color-hover: var(--oj-jade);
+  --tab-container-background: var(--oj-bg-deep);
+  --tab-text-color: var(--oj-muted);
+  --tab-text-color-active: var(--oj-cream);
+  --tab-text-color-focused: var(--oj-text);
+  --tab-text-color-focused-active: var(--oj-cream);
+  --tab-outline-color: var(--oj-border);
+
+  --nav-item-color: var(--oj-muted);
+  --nav-item-color-hover: var(--oj-text);
+  --nav-item-color-active: var(--oj-cream);
+  --nav-item-background-hover: rgba(117, 187, 179, 0.07);
+  --nav-item-background-active: rgba(84, 158, 106, 0.14);
+  --nav-collapse-icon-color: #53685b;
+  --nav-collapse-icon-color-collapsed: #53685b;
+  --nav-indentation-guide-color: var(--oj-border);
+
+  --link-color: #63b3d7;
+  --link-color-hover: #8ed8f0;
+  --link-external-color: #b28bd8;
+  --link-external-color-hover: #d1abea;
+  --link-unresolved-color: var(--oj-pink);
+  --link-unresolved-opacity: 0.8;
+  --link-unresolved-decoration-color: rgba(210, 104, 156, 0.5);
+
+  /* Heading spectrum: cream, jade, cyan, ume, gold and warm earth. */
+  --h1-color: var(--oj-cream);
+  --h2-color: var(--oj-jade-bright);
+  --h3-color: var(--oj-cyan);
+  --h4-color: var(--oj-pink);
+  --h5-color: var(--oj-yellow);
+  --h6-color: var(--oj-brown);
+  --bold-color: var(--oj-cream);
+  --italic-color: #acd4cf;
+  --tag-color: #d69a63;
+  --tag-color-hover: var(--oj-cream);
+  --tag-background: rgba(162, 115, 75, 0.16);
+  --tag-background-hover: rgba(214, 154, 99, 0.25);
+  --inline-title-color: #acd4cf;
+
+  --code-normal: #acd4cf;
+  --code-background: var(--oj-bg-deep);
+  --code-comment: #81b8a8;
+  --code-function: var(--oj-jade-bright);
+  --code-important: var(--oj-red);
+  --code-keyword: var(--oj-pink);
+  --code-operator: #c1c497;
+  --code-property: var(--oj-cream);
+  --code-punctuation: var(--oj-muted);
+  --code-string: var(--oj-jade);
+  --code-tag: var(--oj-cyan);
+  --code-value: var(--oj-brown);
+
+  --blockquote-border-color: var(--oj-jade);
+  --blockquote-color: #acd4cf;
+  --hr-color: var(--oj-border-strong);
+  --checkbox-color: var(--oj-jade);
+  --checkbox-color-hover: var(--oj-jade-bright);
+  --checkbox-border-color: var(--oj-muted);
+  --checkbox-marker-color: var(--oj-bg-deep);
+  --list-marker-color: var(--oj-jade);
+  --list-marker-color-hover: var(--oj-cyan);
+  --list-marker-color-collapsed: var(--oj-yellow);
+  --table-header-background: var(--oj-bg-soft);
+  --table-header-background-hover: #1d3027;
+  --table-row-alt-background: rgba(24, 37, 31, 0.55);
+  --table-row-background-hover: rgba(84, 158, 106, 0.08);
+
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: #23372b;
+  --scrollbar-active-thumb-bg: #32473b;
+  --indentation-guide-color: var(--oj-border);
+  --indentation-guide-color-active: var(--oj-jade);
+
+  --graph-line: #32473b;
+  --graph-node: var(--oj-jade);
+  --graph-node-focused: var(--oj-cream);
+  --graph-node-tag: var(--oj-yellow);
+  --graph-node-attachment: var(--oj-pink);
+  --graph-node-unresolved: var(--oj-red);
+
+  --oj-mermaid-canvas: #101b17;
+  --oj-mermaid-node-bg: #18251f;
+  --oj-mermaid-node-border: #549e6a;
+  --oj-mermaid-node-text: #f7e8b2;
+  --oj-mermaid-line: #81a095;
+  --oj-mermaid-accent: #75bbb3;
+  --oj-mermaid-label-bg: #13201b;
+}
+
+/* A warm paper companion for users who switch Obsidian to light mode. */
+.theme-light {
+  --color-base-00: #f3f0df;
+  --color-base-05: #ece9d8;
+  --color-base-10: #e5e2d1;
+  --color-base-20: #d7d6c3;
+  --color-base-25: #c9ccba;
+  --color-base-30: #b9c1ae;
+  --color-base-35: #9eae9c;
+  --color-base-40: #819688;
+  --color-base-50: #647c6e;
+  --color-base-60: #4b6256;
+  --color-base-70: #344a3e;
+  --color-base-100: #13201b;
+
+  --background-primary: #f3f0df;
+  --background-primary-alt: #ece9d8;
+  --background-secondary: #e5e2d1;
+  --background-secondary-alt: #d7d6c3;
+  --background-modifier-border: #c2c8b6;
+  --background-modifier-border-hover: #91a595;
+  --background-modifier-border-focus: #3c835d;
+  --background-modifier-hover: rgba(50, 100, 72, 0.08);
+  --background-modifier-active-hover: rgba(50, 100, 72, 0.14);
+  --background-modifier-form-field: #eeecdc;
+  --background-modifier-form-field-highlighted: #f7f4e5;
+  --background-modifier-box-shadow: rgba(35, 62, 48, 0.18);
+  --background-modifier-error: rgba(189, 56, 47, 0.12);
+  --background-modifier-error-hover: rgba(189, 56, 47, 0.2);
+  --background-modifier-success: rgba(60, 131, 93, 0.16);
+  --background-modifier-message: rgba(243, 240, 223, 0.94);
+  --tooltip-background: #264c3b;
+  --tooltip-text: #f7f3de;
+  --text-normal: #263a30;
+  --text-muted: #597065;
+  --text-faint: #819286;
+  --text-accent: #327a5a;
+  --text-accent-hover: #166f66;
+  --text-on-accent: #f7f3de;
+  --text-on-accent-inverted: #173e2d;
+  --text-error: #bd382f;
+  --text-success: #377849;
+  --text-warning: #8a7611;
+  --text-selection: rgba(84, 158, 106, 0.26);
+  --text-highlight-bg: rgba(196, 164, 26, 0.2);
+  --text-highlight-bg-active: rgba(196, 164, 26, 0.32);
+  --interactive-normal: #e5e2d1;
+  --interactive-hover: #daddca;
+  --interactive-accent: #3c835d;
+  --interactive-accent-hover: #2f704d;
+  --interactive-accent-rgb: 60, 131, 93;
+  --interactive-success: #377849;
+
+  --icon-color: #647c6e;
+  --icon-color-hover: #264c3b;
+  --icon-color-active: #17746d;
+  --icon-color-focused: #327a5a;
+  /* Same six-color hierarchy, darkened for the paper background. */
+  --h1-color: #183e2d;
+  --h2-color: #3e7652;
+  --h3-color: #17746d;
+  --h4-color: #a34772;
+  --h5-color: #8a7611;
+  --h6-color: #895c39;
+  --bold-color: #173e2d;
+  --italic-color: #3d6858;
+  --inline-title-color: #234f42;
+  --link-color: #286b8a;
+  --link-color-hover: #174f72;
+  --link-external-color: #75528f;
+  --link-external-color-hover: #593b73;
+  --link-unresolved-color: #a34772;
+  --link-unresolved-opacity: 0.86;
+  --link-unresolved-decoration-color: rgba(163, 71, 114, 0.46);
+  --tag-color: #9a542f;
+  --tag-color-hover: #663218;
+  --tag-background: rgba(180, 105, 52, 0.12);
+  --tag-background-hover: rgba(180, 105, 52, 0.21);
+  --code-normal: #244c40;
+  --code-background: #e1e5d5;
+  --code-comment: #526a61;
+  --code-function: #25734d;
+  --code-important: #b04370;
+  --code-keyword: #ad3269;
+  --code-operator: #67651f;
+  --code-property: #176b68;
+  --code-punctuation: #647c6e;
+  --code-string: #287542;
+  --code-tag: #176c82;
+  --code-value: #b0522f;
+  --blockquote-border-color: #4e9165;
+  --blockquote-color: #47685a;
+  --hr-color: #91a595;
+  --checkbox-color: #3c835d;
+  --checkbox-color-hover: #2f704d;
+  --checkbox-border-color: #647c6e;
+  --checkbox-marker-color: #f7f3de;
+  --list-marker-color: #3c835d;
+  --list-marker-color-hover: #17746d;
+  --list-marker-color-collapsed: #8a7611;
+  --table-header-background: #e1e0ce;
+  --table-header-background-hover: #d8dac7;
+  --table-row-alt-background: rgba(215, 214, 195, 0.5);
+  --table-row-background-hover: rgba(60, 131, 93, 0.08);
+
+  --nav-item-color: #597065;
+  --nav-item-color-hover: #263a30;
+  --nav-item-color-active: #183e2d;
+  --nav-item-background-active: rgba(60, 131, 93, 0.12);
+  --nav-item-background-hover: rgba(60, 131, 93, 0.07);
+  --nav-collapse-icon-color: #819286;
+  --nav-collapse-icon-color-collapsed: #819286;
+  --nav-indentation-guide-color: #c2c8b6;
+
+  --titlebar-background: #e5e2d1;
+  --titlebar-background-focused: #e5e2d1;
+  --ribbon-background: #e5e2d1;
+  --divider-color: #c2c8b6;
+  --divider-color-hover: #3c835d;
+  --tab-container-background: #e5e2d1;
+  --tab-text-color: #647c6e;
+  --tab-text-color-active: #183e2d;
+  --tab-text-color-focused: #344a3e;
+  --tab-text-color-focused-active: #183e2d;
+  --tab-outline-color: #c2c8b6;
+
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: #c2c8b6;
+  --scrollbar-active-thumb-bg: #91a595;
+  --indentation-guide-color: #c2c8b6;
+  --indentation-guide-color-active: #3c835d;
+
+  --graph-line: #aab7a8;
+  --graph-node: #3c835d;
+  --graph-node-focused: #173e2d;
+  --graph-node-tag: #a38d17;
+  --graph-node-attachment: #a34772;
+  --graph-node-unresolved: #bd382f;
+
+  --oj-mermaid-canvas: #eeecdc;
+  --oj-mermaid-node-bg: #e1e5d5;
+  --oj-mermaid-node-border: #3c835d;
+  --oj-mermaid-node-text: #183e2d;
+  --oj-mermaid-line: #597065;
+  --oj-mermaid-accent: #237362;
+  --oj-mermaid-label-bg: #f3f0df;
+}
+
+/* Quiet chrome with a thin jade signal for the current context. */
+.workspace-tab-header-container {
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.workspace-tab-header.is-active {
+  box-shadow: inset 0 -2px 0 var(--interactive-accent);
+}
+
+.workspace-tab-header.is-active::before,
+.workspace-tab-header.is-active::after {
+  display: none;
+}
+
+.mod-root .workspace-tab-header-inner {
+  padding-top: 1px;
+}
+
+.workspace-leaf-resize-handle:hover {
+  background-color: var(--interactive-accent);
+}
+
+/* Tooltips need explicit contrast, especially over the paper-light palette. */
+.tooltip {
+  border: 1px solid color-mix(in srgb, var(--interactive-accent) 46%, transparent);
+  background: var(--tooltip-background) !important;
+  box-shadow: 0 5px 16px var(--background-modifier-box-shadow);
+  color: var(--tooltip-text) !important;
+  font-weight: 560;
+}
+
+.tooltip.mod-top .tooltip-arrow {
+  border-top-color: var(--tooltip-background) !important;
+}
+
+.tooltip.mod-bottom .tooltip-arrow {
+  border-bottom-color: var(--tooltip-background) !important;
+}
+
+.tooltip.mod-left .tooltip-arrow {
+  border-left-color: var(--tooltip-background) !important;
+}
+
+.tooltip.mod-right .tooltip-arrow {
+  border-right-color: var(--tooltip-background) !important;
+}
+
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+  box-shadow: inset 2px 0 0 var(--interactive-accent);
+}
+
+.nav-file-title,
+.nav-folder-title {
+  border-radius: var(--radius-s);
+  margin-block: 1px;
+}
+
+/* Editor and reading mode share the same restrained rhythm. */
+.markdown-source-view.mod-cm6 .cm-scroller,
+.markdown-reading-view {
+  padding-bottom: 12vh;
+}
+
+.inline-title {
+  letter-spacing: -0.025em;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 1px 18px color-mix(in srgb, var(--inline-title-color) 12%, transparent);
+}
+
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6,
+.HyperMD-header {
+  letter-spacing: -0.015em;
+}
+
+.markdown-rendered h2 {
+  padding-bottom: 0.28em;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+/* A linked heading is still a heading: keep its hierarchy color. */
+.markdown-rendered :is(h1, h2, h3, h4, h5, h6) a,
+.markdown-rendered :is(h1, h2, h3, h4, h5, h6) a:hover,
+.markdown-source-view.mod-cm6 .cm-header .cm-hmd-internal-link,
+.markdown-source-view.mod-cm6 .cm-header .cm-link,
+.markdown-source-view.mod-cm6 .cm-header .cm-url {
+  color: inherit;
+}
+
+.markdown-rendered a:not(.tag) {
+  text-decoration-color: color-mix(in srgb, currentColor 48%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+.markdown-rendered a:not(.tag):hover {
+  text-decoration-color: currentColor;
+}
+
+.markdown-rendered blockquote,
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+  background: color-mix(in srgb, var(--interactive-accent) 6%, transparent);
+  border-inline-start-width: 3px;
+}
+
+.markdown-rendered blockquote {
+  border-radius: 0 var(--radius-m) var(--radius-m) 0;
+  padding: 0.65em 1em;
+}
+
+.markdown-rendered :not(pre) > code,
+.markdown-source-view.mod-cm6 .cm-inline-code:not(.cm-formatting) {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-s);
+  padding: 0.1em 0.32em;
+  background: var(--code-background);
+  color: var(--code-normal);
+  font-size: 0.9em;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.markdown-rendered pre {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  box-shadow: inset 3px 0 0 color-mix(in srgb, var(--interactive-accent) 68%, transparent);
+  overflow-x: auto;
+}
+
+.markdown-rendered pre code {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  white-space: pre;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.markdown-rendered .codeblock-language,
+.markdown-source-view.mod-cm6 .codeblock-language,
+.markdown-source-view.mod-cm6 .code-block-flair {
+  margin: 0.45em 0.55em 0 auto;
+  padding: 0.12em 0.48em;
+  border: 1px solid color-mix(in srgb, var(--interactive-accent) 28%, var(--background-modifier-border));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--interactive-accent) 9%, var(--code-background));
+  color: var(--text-muted);
+  font-family: var(--font-monospace);
+  font-size: 0.72em;
+  font-weight: 650;
+  letter-spacing: 0.035em;
+}
+
+.theme-light .markdown-rendered pre {
+  border-color: color-mix(in srgb, var(--interactive-accent) 34%, var(--background-modifier-border));
+  background: var(--code-background);
+  box-shadow:
+    inset 3px 0 0 color-mix(in srgb, var(--interactive-accent) 76%, transparent),
+    0 6px 18px rgba(35, 62, 48, 0.06);
+}
+
+.theme-light .markdown-rendered pre .indentation-guide,
+.theme-light .markdown-rendered pre [class*="indentation-guide"] {
+  border-color: color-mix(in srgb, var(--interactive-accent) 18%, transparent);
+  opacity: 0.58;
+}
+
+/* Live Preview code-block shell matches the rendered <pre> treatment. */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  border-inline: 1px solid color-mix(in srgb, var(--interactive-accent) 34%, var(--background-modifier-border));
+  background: var(--code-background);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-begin {
+  border-top: 1px solid color-mix(in srgb, var(--interactive-accent) 34%, var(--background-modifier-border));
+  border-start-start-radius: var(--radius-m);
+  border-start-end-radius: var(--radius-m);
+  box-shadow: inset 3px 0 0 color-mix(in srgb, var(--interactive-accent) 76%, transparent);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-bg:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end) {
+  box-shadow: inset 3px 0 0 color-mix(in srgb, var(--interactive-accent) 76%, transparent);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-end {
+  border-bottom: 1px solid color-mix(in srgb, var(--interactive-accent) 34%, var(--background-modifier-border));
+  border-end-start-radius: var(--radius-m);
+  border-end-end-radius: var(--radius-m);
+  box-shadow: inset 3px 0 0 color-mix(in srgb, var(--interactive-accent) 76%, transparent);
+}
+
+/* Explicit Prism token map: keep every language from collapsing into jade. */
+.markdown-rendered pre .token.comment,
+.markdown-rendered pre .token.prolog,
+.markdown-rendered pre .token.doctype,
+.markdown-rendered pre .token.cdata {
+  color: var(--code-comment);
+  font-style: italic;
+}
+
+.markdown-rendered pre .token.punctuation {
+  color: var(--code-punctuation);
+}
+
+.markdown-rendered pre .token.property,
+.markdown-rendered pre .token.tag,
+.markdown-rendered pre .token.constant,
+.markdown-rendered pre .token.symbol,
+.markdown-rendered pre .token.deleted {
+  color: var(--code-property);
+}
+
+.markdown-rendered pre .token.boolean,
+.markdown-rendered pre .token.number {
+  color: var(--code-value);
+}
+
+.markdown-rendered pre .token.selector,
+.markdown-rendered pre .token.attr-name,
+.markdown-rendered pre .token.string,
+.markdown-rendered pre .token.char,
+.markdown-rendered pre .token.builtin,
+.markdown-rendered pre .token.inserted {
+  color: var(--code-string);
+}
+
+.markdown-rendered pre .token.operator,
+.markdown-rendered pre .token.entity,
+.markdown-rendered pre .token.url {
+  color: var(--code-operator);
+}
+
+.markdown-rendered pre .token.atrule,
+.markdown-rendered pre .token.attr-value,
+.markdown-rendered pre .token.keyword {
+  color: var(--code-keyword);
+}
+
+.markdown-rendered pre .token.function,
+.markdown-rendered pre .token.class-name {
+  color: var(--code-function);
+}
+
+.markdown-rendered pre .token.regex,
+.markdown-rendered pre .token.important,
+.markdown-rendered pre .token.variable {
+  color: var(--code-important);
+}
+
+/* JSON: ume-pink keys, jade values, earthen numbers and pink booleans/null. */
+body .markdown-rendered pre .token.property {
+  color: var(--code-keyword) !important;
+}
+
+body .markdown-rendered pre .token.property.string,
+body .markdown-rendered pre.language-json .token.property,
+body .markdown-rendered pre[data-language="json"] .token.property,
+body .markdown-rendered pre code.language-json .token.property {
+  color: var(--code-keyword) !important;
+  font-weight: 620;
+}
+
+body .markdown-rendered pre.language-json .token.string:not(.property),
+body .markdown-rendered pre[data-language="json"] .token.string:not(.property),
+body .markdown-rendered pre code.language-json .token.string:not(.property) {
+  color: var(--code-string) !important;
+}
+
+body .markdown-rendered pre.language-json :is(.token.boolean, .token.null.keyword),
+body .markdown-rendered pre[data-language="json"] :is(.token.boolean, .token.null.keyword),
+body .markdown-rendered pre code.language-json :is(.token.boolean, .token.null.keyword) {
+  color: var(--code-keyword) !important;
+  font-weight: 620;
+}
+
+/* Shell: commands stand apart from strings, comments, variables and pipes. */
+.markdown-rendered pre code:is(.language-bash, .language-shell, .language-sh) .token.function,
+.markdown-rendered pre code:is(.language-bash, .language-shell, .language-sh) .token.builtin,
+.markdown-rendered pre code:is(.language-bash, .language-shell, .language-sh) .token.command {
+  color: var(--code-tag);
+  font-weight: 620;
+}
+
+.markdown-rendered pre code:is(.language-bash, .language-shell, .language-sh) .token.variable,
+.markdown-rendered pre code:is(.language-bash, .language-shell, .language-sh) .token.parameter {
+  color: var(--code-keyword);
+}
+
+.markdown-rendered pre code:is(.language-bash, .language-shell, .language-sh) .token.operator {
+  color: var(--code-operator);
+  font-weight: 650;
+}
+
+body .markdown-rendered pre .token:is(.function, .builtin, .command) {
+  color: var(--code-function) !important;
+  font-weight: 620;
+}
+
+body .markdown-rendered pre .token.variable,
+body .markdown-rendered pre .token.parameter {
+  color: var(--code-property) !important;
+}
+
+body .markdown-rendered pre .token.string:not(.property) {
+  color: var(--code-string) !important;
+}
+
+body .markdown-rendered pre .token.operator {
+  color: var(--code-operator) !important;
+}
+
+body .markdown-rendered pre .token:is(.class-name, .type, .namespace) {
+  color: var(--code-tag) !important;
+}
+
+body .markdown-rendered pre .token.number {
+  color: var(--code-value) !important;
+  font-weight: 600;
+}
+
+body .markdown-rendered pre .token.constant {
+  color: var(--h5-color) !important;
+  font-weight: 620;
+}
+
+/* CodeMirror/Live Preview uses tok-* classes rather than Prism token classes. */
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .tok-comment {
+  color: var(--code-comment) !important;
+  font-style: italic;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .tok-keyword {
+  color: var(--code-keyword) !important;
+  font-weight: 620;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .tok-string {
+  color: var(--code-string) !important;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .tok-number,
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .tok-bool {
+  color: var(--code-value) !important;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .tok-variableName,
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .tok-function,
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .tok-name {
+  color: var(--code-tag) !important;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .tok-variableName.tok-definition,
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .tok-variableName.tok-local {
+  color: var(--code-property) !important;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock :is(.tok-typeName, .tok-className, .tok-namespace) {
+  color: var(--code-tag) !important;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock :is(.tok-function, .tok-variableName.tok-function) {
+  color: var(--code-function) !important;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .tok-constant {
+  color: var(--h5-color) !important;
+  font-weight: 620;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .tok-propertyName,
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .tok-string.tok-propertyName,
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-property,
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-json-property {
+  color: var(--code-keyword) !important;
+  font-weight: 620;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .tok-string:not(.tok-propertyName) {
+  color: var(--code-string) !important;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .tok-operator,
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .tok-punctuation {
+  color: var(--code-operator) !important;
+}
+
+/* Obsidian's editor-facing CodeMirror classes (used by fenced blocks). */
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-meta {
+  color: var(--code-keyword) !important;
+  font-weight: 620;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-comment {
+  color: var(--code-comment) !important;
+  font-style: italic;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-keyword {
+  color: var(--code-keyword) !important;
+  font-weight: 620;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-string,
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-string-2 {
+  color: var(--code-string) !important;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-number,
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-atom {
+  color: var(--code-value) !important;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock :is(.cm-builtin, .cm-def, .cm-function) {
+  color: var(--code-function) !important;
+  font-weight: 620;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-variable {
+  color: var(--code-tag) !important;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock :is(.cm-variable-2, .cm-variable-3, .cm-property) {
+  color: var(--code-property) !important;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock :is(.cm-type, .cm-qualifier, .cm-tag) {
+  color: var(--code-tag) !important;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-operator {
+  color: var(--code-operator) !important;
+}
+
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock :is(.cm-bracket, .cm-punctuation) {
+  color: var(--code-punctuation) !important;
+}
+
+.markdown-rendered table {
+  width: max-content;
+  min-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid color-mix(in srgb, var(--interactive-accent) 24%, var(--background-modifier-border));
+  border-radius: var(--radius-m);
+  overflow: hidden;
+}
+
+.markdown-rendered .table-wrapper,
+.markdown-rendered .el-table {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-m);
+}
+
+.markdown-rendered th,
+.markdown-rendered td {
+  min-width: 6.2rem;
+  padding: 0.58em 0.72em;
+  border-color: color-mix(in srgb, var(--background-modifier-border) 78%, transparent);
+  vertical-align: top;
+}
+
+.markdown-rendered th {
+  color: var(--bold-color);
+  font-weight: 650;
+}
+
+.markdown-rendered tbody tr:nth-child(even) {
+  background: var(--table-row-alt-background);
+}
+
+.markdown-rendered tbody tr:hover {
+  background: var(--table-row-background-hover);
+}
+
+.markdown-rendered table code {
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: keep-all;
+}
+
+/* Mermaid shares the theme palette and scales to the note width. */
+/* Obsidian inverts Mermaid SVGs in dark mode. Our palette is already dark. */
+body.theme-dark .mermaid > svg {
+  filter: none !important;
+}
+
+.theme-dark .mermaid {
+  --oj-mermaid-canvas: #101b17;
+  --oj-mermaid-node-bg: #18251f;
+  --oj-mermaid-node-border: #549e6a;
+  --oj-mermaid-node-text: #f7e8b2;
+  --oj-mermaid-line: #81a095;
+  --oj-mermaid-accent: #75bbb3;
+  --oj-mermaid-label-bg: #13201b;
+}
+
+.theme-light .mermaid {
+  --oj-mermaid-canvas: #eeecdc;
+  --oj-mermaid-node-bg: #e1e5d5;
+  --oj-mermaid-node-border: #3c835d;
+  --oj-mermaid-node-text: #183e2d;
+  --oj-mermaid-line: #597065;
+  --oj-mermaid-accent: #237362;
+  --oj-mermaid-label-bg: #f3f0df;
+}
+
+body .mermaid {
+  width: 100%;
+  margin-block: 1em;
+  padding: 1em;
+  border: 1px solid color-mix(in srgb, var(--oj-mermaid-node-border) 30%, var(--background-modifier-border));
+  border-radius: var(--radius-l);
+  background: var(--oj-mermaid-canvas);
+  overflow: hidden;
+}
+
+body .mermaid svg {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin-inline: auto;
+}
+
+body .mermaid .node rect,
+body .mermaid .node circle,
+body .mermaid .node ellipse,
+body .mermaid .node polygon,
+body .mermaid .node path,
+body .mermaid rect.actor,
+body .mermaid g.actor rect,
+body .mermaid .note {
+  fill: var(--oj-mermaid-node-bg) !important;
+  stroke: var(--oj-mermaid-node-border) !important;
+}
+
+body .mermaid .nodeLabel,
+body .mermaid .nodeLabel p,
+body .mermaid .label,
+body .mermaid text.actor,
+body .mermaid text.actor tspan,
+body .mermaid g.actor text,
+body .mermaid g.actor text tspan,
+body .mermaid .noteText,
+body .mermaid .messageText,
+body .mermaid .messageText tspan,
+body .mermaid .loopText {
+  color: var(--oj-mermaid-node-text) !important;
+  fill: var(--oj-mermaid-node-text) !important;
+}
+
+body .mermaid .edgeLabel,
+body .mermaid .edgeLabel p {
+  color: var(--oj-mermaid-node-text) !important;
+  background: var(--oj-mermaid-label-bg) !important;
+}
+
+body .mermaid .edgeLabel rect,
+body .mermaid .labelBkg {
+  fill: var(--oj-mermaid-label-bg) !important;
+  opacity: 0.96 !important;
+}
+
+body .mermaid .flowchart-link,
+body .mermaid .edgePath path,
+body .mermaid .messageLine0,
+body .mermaid .messageLine1,
+body .mermaid .actor-line,
+body .mermaid .loopLine {
+  stroke: var(--oj-mermaid-line) !important;
+}
+
+body .mermaid marker path,
+body .mermaid .arrowheadPath {
+  fill: var(--oj-mermaid-line) !important;
+  stroke: var(--oj-mermaid-line) !important;
+}
+
+body .mermaid .activation0,
+body .mermaid .activation1,
+body .mermaid .activation2 {
+  fill: color-mix(in srgb, var(--oj-mermaid-accent) 16%, var(--oj-mermaid-node-bg)) !important;
+  stroke: var(--oj-mermaid-accent) !important;
+}
+
+body .mermaid .actor-man circle,
+body .mermaid .actor-man line,
+body .mermaid circle.actor-man,
+body .mermaid line.actor-man {
+  fill: var(--oj-mermaid-node-bg) !important;
+  stroke: var(--oj-mermaid-node-border) !important;
+}
+
+/* Number glyphs sit on filled markers, not on the diagram canvas. */
+body :is(#osaka-jade-sequence-contrast, .mermaid) svg #sequencenumber {
+  fill: #264c3b !important;
+  stroke: #549e6a !important;
+}
+
+body :is(#osaka-jade-sequence-contrast, .mermaid) svg text.sequenceNumber {
+  color: #f7e8b2 !important;
+  fill: #f7e8b2 !important;
+  font-weight: 700;
+}
+
+/*
+ * Mermaid changes class names between releases. In dark mode, enforce the
+ * essential contrast at the SVG element level so labels can never turn brown.
+ */
+.theme-dark .mermaid svg rect {
+  fill: #18251f !important;
+  stroke: #549e6a !important;
+}
+
+.theme-dark .mermaid svg text,
+.theme-dark .mermaid svg tspan,
+.theme-dark .mermaid svg foreignObject,
+.theme-dark .mermaid svg foreignObject div,
+.theme-dark .mermaid svg foreignObject span,
+.theme-dark .mermaid svg foreignObject p {
+  color: #f7e8b2 !important;
+  fill: #f7e8b2 !important;
+}
+
+.theme-dark .mermaid svg .messageText,
+.theme-dark .mermaid svg .messageText * {
+  color: #f7e8b2 !important;
+  fill: #f7e8b2 !important;
+}
+
+.theme-dark .mermaid svg .edgeLabel,
+.theme-dark .mermaid svg .edgeLabel text,
+.theme-dark .mermaid svg .edgeLabel tspan,
+.theme-dark .mermaid svg .edgeLabel div,
+.theme-dark .mermaid svg .edgeLabel span,
+.theme-dark .mermaid svg .edgeLabel p {
+  color: #d6d5bc !important;
+  fill: #d6d5bc !important;
+  background: #13201b !important;
+}
+
+/* Beat Mermaid's dynamically generated #mermaid-* selector specificity. */
+body.theme-dark :is(#osaka-jade-mermaid-override, .mermaid) svg rect {
+  fill: #18251f !important;
+  stroke: #549e6a !important;
+}
+
+body.theme-dark :is(#osaka-jade-mermaid-override, .mermaid) svg :is(text, tspan) {
+  color: #f7e8b2 !important;
+  fill: #f7e8b2 !important;
+  stroke: none !important;
+}
+
+body.theme-dark :is(#osaka-jade-mermaid-override, .mermaid) svg foreignObject,
+body.theme-dark :is(#osaka-jade-mermaid-override, .mermaid) svg foreignObject * {
+  color: #f7e8b2 !important;
+  fill: #f7e8b2 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+
+.markdown-rendered mark {
+  color: var(--text-normal);
+  border-radius: 2px;
+  padding: 0.03em 0.14em;
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 10%,
+      var(--text-highlight-bg) 10%,
+      var(--text-highlight-bg) 91%,
+      transparent 91%
+    );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Keyboard input should read as a key, not another inline code token. */
+.markdown-rendered kbd {
+  display: inline-block;
+  min-width: 1.65em;
+  margin-inline: 0.08em;
+  padding: 0.08em 0.38em 0.13em;
+  border: 1px solid color-mix(in srgb, var(--text-muted) 48%, var(--background-modifier-border));
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--background-primary) 84%, var(--interactive-accent)),
+    var(--background-primary-alt)
+  );
+  box-shadow: 0 1px 2px var(--background-modifier-box-shadow);
+  color: var(--bold-color);
+  font-family: var(--font-monospace);
+  font-size: 0.84em;
+  font-weight: 650;
+  line-height: 1.35;
+  text-align: center;
+  vertical-align: 0.06em;
+}
+
+/* Footnotes stay small, but their references must remain easy to find. */
+.markdown-rendered .footnote-ref a,
+.markdown-rendered a.footnote-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.45em;
+  min-height: 1.45em;
+  margin-inline: 0.08em;
+  padding-inline: 0.28em;
+  border: 1px solid color-mix(in srgb, var(--h5-color) 42%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--h5-color) 12%, transparent);
+  color: var(--h5-color);
+  font-size: 0.78em;
+  font-weight: 750;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-rendered .footnote-ref a:hover,
+.markdown-rendered a.footnote-link:hover {
+  border-color: var(--h5-color);
+  background: color-mix(in srgb, var(--h5-color) 20%, transparent);
+  color: var(--h5-color);
+}
+
+.markdown-rendered .footnotes {
+  margin-top: 2.2em;
+  padding-top: 0.9em;
+  border-top: 1px solid color-mix(in srgb, var(--interactive-accent) 46%, var(--background-modifier-border));
+  color: var(--text-muted);
+  font-size: 0.92em;
+}
+
+.markdown-rendered .footnotes li::marker {
+  color: var(--interactive-accent);
+  font-weight: 700;
+}
+
+.markdown-rendered .footnote-backref {
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+/* Editor footnotes have their own classes and retain editable source syntax. */
+body .markdown-source-view.mod-cm6 .cm-line span.cm-footref {
+  color: var(--link-color);
+  font-size: 0.85em;
+  font-weight: 650;
+  opacity: 1;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--link-color) 45%, transparent);
+  text-underline-offset: 0.15em;
+}
+
+body .markdown-source-view.mod-cm6 .cm-line.HyperMD-footnote span.cm-hmd-footnote,
+body .markdown-source-view.mod-cm6 .cm-line.HyperMD-footnote span.cm-hmd-footnote .cm-underline {
+  color: var(--link-color);
+  font-size: 0.85em;
+  font-weight: 650;
+}
+
+.tag {
+  border: 1px solid color-mix(in srgb, var(--tag-color) 34%, transparent);
+  border-radius: 999px;
+  padding-inline: 0.5em;
+  font-weight: 580;
+  letter-spacing: 0.01em;
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--tag-color) 9%, transparent);
+}
+
+.tag:hover {
+  border-color: color-mix(in srgb, var(--tag-color) 58%, transparent);
+}
+
+/* A jade-to-transparent divider gives sections a deliberate finish. */
+.markdown-rendered hr {
+  height: 1px;
+  margin-block: 2.6em;
+  border: 0;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--interactive-accent) 78%, transparent),
+    color-mix(in srgb, var(--text-accent) 42%, transparent) 55%,
+    transparent 100%
+  );
+  opacity: 0.9;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-hr {
+  color: var(--interactive-accent);
+}
+
+/* Native HTML details become a compact Midnight Matcha accordion. */
+:is(.markdown-rendered, .markdown-source-view.mod-cm6) details {
+  margin-block: 0.9em 1.4em;
+  padding: 0.8em 1em;
+  border: 1px solid var(--background-modifier-border);
+  border-inline-start: 3px solid var(--interactive-accent);
+  border-radius: var(--radius-m);
+  background: color-mix(in srgb, var(--interactive-accent) 5%, var(--background-primary-alt));
+}
+
+:is(.markdown-rendered, .markdown-source-view.mod-cm6) details > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.55em;
+  color: var(--h1-color);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+:is(.markdown-rendered, .markdown-source-view.mod-cm6) details > summary::-webkit-details-marker {
+  display: none;
+}
+
+:is(.markdown-rendered, .markdown-source-view.mod-cm6) details > summary::before {
+  content: "▸";
+  flex: 0 0 auto;
+  color: var(--interactive-accent);
+  font-size: 1.05em;
+  transform-origin: center;
+  transition: transform 140ms ease;
+}
+
+:is(.markdown-rendered, .markdown-source-view.mod-cm6) details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+:is(.markdown-rendered, .markdown-source-view.mod-cm6) details > :not(summary) {
+  margin-inline-start: 1.6em;
+}
+
+/*
+ * Callouts use small pools of coloured light rather than flat grey cards.
+ * The extra `body` specificity wins over Obsidian's built-in callout map.
+ */
+body .callout {
+  --callout-color: 117, 187, 179;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(var(--callout-color), 0.38);
+  border-inline-start: 4px solid rgb(var(--callout-color));
+  border-radius: var(--radius-l);
+  background:
+    radial-gradient(circle at 0 0, rgba(var(--callout-color), 0.16), transparent 42%),
+    linear-gradient(135deg, rgba(var(--callout-color), 0.07), transparent 68%),
+    var(--background-primary-alt);
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.13),
+    inset 0 1px 0 rgba(var(--callout-color), 0.11);
+}
+
+body .callout-title {
+  color: color-mix(in srgb, rgb(var(--callout-color)) 84%, var(--text-normal));
+  font-weight: 700;
+  letter-spacing: 0.005em;
+}
+
+body .callout-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.7em;
+  height: 1.7em;
+  margin-inline-end: 0.22em;
+  border: 1px solid rgba(var(--callout-color), 0.28);
+  border-radius: 50%;
+  background: rgba(var(--callout-color), 0.12);
+  color: rgb(var(--callout-color));
+}
+
+body .callout-icon svg {
+  width: 1.05em;
+  height: 1.05em;
+}
+
+body .callout-fold {
+  color: rgb(var(--callout-color));
+  opacity: 0.78;
+}
+
+body .callout-content {
+  color: var(--text-normal);
+}
+
+body .callout-content > :first-child {
+  margin-top: 0.65em;
+}
+
+body .callout[data-callout="note"],
+body .callout[data-callout="info"] {
+  --callout-color: 80, 148, 173;
+}
+
+body .callout[data-callout="abstract"],
+body .callout[data-callout="summary"],
+body .callout[data-callout="tldr"] {
+  --callout-color: 117, 187, 179;
+}
+
+body .callout[data-callout="tip"],
+body .callout[data-callout="hint"] {
+  --callout-color: 45, 213, 183;
+}
+
+body .callout[data-callout="important"] {
+  --callout-color: 174, 105, 214;
+}
+
+body .callout[data-callout="warning"],
+body .callout[data-callout="attention"] {
+  --callout-color: 229, 199, 54;
+}
+
+body .callout[data-callout="caution"] {
+  --callout-color: 232, 137, 62;
+}
+
+body .callout[data-callout="danger"],
+body .callout[data-callout="error"] {
+  --callout-color: 255, 83, 69;
+}
+
+body .callout[data-callout="bug"],
+body .callout[data-callout="failure"],
+body .callout[data-callout="fail"],
+body .callout[data-callout="missing"] {
+  --callout-color: 210, 104, 156;
+}
+
+body .callout[data-callout="success"],
+body .callout[data-callout="check"],
+body .callout[data-callout="done"] {
+  --callout-color: 84, 158, 106;
+}
+
+body .callout[data-callout="question"],
+body .callout[data-callout="help"],
+body .callout[data-callout="faq"] {
+  --callout-color: 229, 199, 54;
+}
+
+body .callout[data-callout="todo"] {
+  --callout-color: 117, 187, 179;
+}
+
+body .callout[data-callout="example"] {
+  --callout-color: 178, 139, 218;
+}
+
+body .callout[data-callout="quote"],
+body .callout[data-callout="cite"] {
+  --callout-color: 129, 160, 149;
+}
+
+.theme-light .callout-title {
+  color: color-mix(in srgb, rgb(var(--callout-color)) 70%, #13201b);
+}
+
+.theme-light .callout {
+  box-shadow:
+    0 9px 24px rgba(35, 62, 48, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.48);
+}
+
+.theme-light .callout-icon {
+  color: color-mix(in srgb, rgb(var(--callout-color)) 76%, #13201b);
+}
+
+/* Inputs and menus retain strong focus visibility without neon glare. */
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+  border: 1px solid var(--background-modifier-border);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--interactive-accent);
+  box-shadow: 0 0 0 2px rgba(var(--interactive-accent-rgb), 0.14);
+}
+
+/*
+ * Properties are structured rows, not a collection of form-field boxes.
+ * These overrides intentionally neutralise the generic input treatment above.
+ */
+.metadata-container .metadata-property {
+  margin-block: 4px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  background: color-mix(in srgb, var(--interactive-accent) 3%, var(--background-primary-alt));
+  overflow: hidden;
+}
+
+.metadata-container .metadata-property:hover {
+  border-color: color-mix(in srgb, var(--interactive-accent) 48%, var(--background-modifier-border));
+  background: color-mix(in srgb, var(--interactive-accent) 6%, var(--background-primary-alt));
+}
+
+.metadata-container .metadata-property-key {
+  align-self: stretch;
+  padding-inline: 0.55em;
+  border-inline-end: 1px solid var(--background-modifier-border);
+  background: color-mix(in srgb, var(--interactive-accent) 5%, transparent);
+}
+
+.metadata-container .metadata-property-value {
+  padding-inline: 0.55em;
+}
+
+.metadata-container input[type="text"],
+.metadata-container input[type="number"],
+.metadata-container .metadata-property-key-input,
+.metadata-container .metadata-property-value input,
+.metadata-container .metadata-input-longtext {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.metadata-container input:focus,
+.metadata-container .metadata-property-key-input:focus,
+.metadata-container .metadata-property-value input:focus,
+.metadata-container .metadata-input-longtext:focus {
+  border: 0;
+  box-shadow: none;
+}
+
+.metadata-container .metadata-property-icon {
+  color: var(--interactive-accent);
+  opacity: 0.72;
+}
+
+.metadata-container .metadata-add-button {
+  color: var(--text-muted);
+}
+
+.metadata-container .metadata-add-button:hover {
+  color: var(--text-accent);
+  background: color-mix(in srgb, var(--interactive-accent) 7%, transparent);
+}
+
+.menu,
+.suggestion-container,
+.popover,
+.modal {
+  border: 1px solid var(--background-modifier-border);
+  box-shadow: 0 12px 34px var(--background-modifier-box-shadow);
+}
+
+.suggestion-item.is-selected {
+  box-shadow: inset 2px 0 0 var(--interactive-accent);
+}
+
+button.mod-cta {
+  color: var(--text-on-accent);
+}
+
+/* Calendar and Tasks community plugins inherit the jade language. */
+#calendar-container .today {
+  color: var(--text-on-accent);
+  background: var(--interactive-accent);
+  border-radius: 50%;
+}
+
+#calendar-container .active {
+  color: var(--text-accent);
+  border-color: var(--interactive-accent);
+}
+
+.tasks-list-text .task-done,
+.markdown-preview-view ul > li.task-list-item.is-checked {
+  color: var(--text-muted);
+}
+
+/* Keep motion polished and respect reduced-motion preferences. */
+@media (prefers-reduced-motion: no-preference) {
+  .nav-file-title,
+  .nav-folder-title,
+  .workspace-tab-header,
+  .clickable-icon,
+  button {
+    transition: color 120ms ease, background-color 120ms ease, border-color 120ms ease;
+  }
+}
+
+@media print {
+  body {
+    --background-primary: #ffffff;
+    --text-normal: #1d2d25;
+    --text-muted: #53685b;
+    --h1-color: #173e2d;
+    --h2-color: #286c56;
+    --h3-color: #3e7652;
+  }
+}
