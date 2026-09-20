@@ -14,12 +14,14 @@ A dark Obsidian theme built around deep matcha greens and honey-toned text. Low 
 
 | Role | Color |
 |---|---|
-| Background | `#101b19` |
-| Surface | `#22382e` |
+| Dark background | `#101b19` |
+| Dark surface | `#22382e` |
+| Light paper | `#f7efd0` |
+| Light paper surface | `#ebe2c3` |
 | Matcha | `#164033` |
 | Foam (accent) | `#398667` · `#51a173` |
 | Mist | `#aad5d6` |
-| Cream (text) | `#e6e5d0` |
+| Cream (dark-mode text) | `#d4d7bb` |
 | Honey (highlight) | `#faf3af` |
 
 Both light and dark modes are supported.

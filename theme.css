@@ -207,35 +207,35 @@ body {
 
 /* A warm paper companion for users who switch Obsidian to light mode. */
 .theme-light {
-  --color-base-00: #f4f3de;
-  --color-base-05: #edecd7;
-  --color-base-10: #e6e5d0;
-  --color-base-20: #d6d8c2;
-  --color-base-25: #c7cdb9;
-  --color-base-30: #b6c2ad;
-  --color-base-35: #9baf9c;
-  --color-base-40: #80978b;
+  --color-base-00: #f7efd0;
+  --color-base-05: #f1e8c8;
+  --color-base-10: #ebe2c3;
+  --color-base-20: #ddd3b5;
+  --color-base-25: #cec5aa;
+  --color-base-30: #bcb69e;
+  --color-base-35: #a0a38d;
+  --color-base-40: #858f7d;
   --color-base-50: #637d71;
   --color-base-60: #4a6359;
   --color-base-70: #334b41;
   --color-base-100: #12211d;
 
-  --background-primary: #f4f3de;
-  --background-primary-alt: #edecd7;
-  --background-secondary: #e6e5d0;
-  --background-secondary-alt: #d6d8c2;
-  --background-modifier-border: #c0c9b5;
-  --background-modifier-border-hover: #90a697;
+  --background-primary: #f7efd0;
+  --background-primary-alt: #f1e8c8;
+  --background-secondary: #ebe2c3;
+  --background-secondary-alt: #ddd3b5;
+  --background-modifier-border: #c5c2a6;
+  --background-modifier-border-hover: #989f84;
   --background-modifier-border-focus: #398667;
   --background-modifier-hover: rgba(50, 100, 72, 0.08);
   --background-modifier-active-hover: rgba(50, 100, 72, 0.14);
-  --background-modifier-form-field: #eeefdb;
-  --background-modifier-form-field-highlighted: #f8f7e4;
+  --background-modifier-form-field: #f3ebcf;
+  --background-modifier-form-field-highlighted: #fff8df;
   --background-modifier-box-shadow: rgba(35, 62, 48, 0.18);
   --background-modifier-error: rgba(189, 56, 47, 0.12);
   --background-modifier-error-hover: rgba(189, 56, 47, 0.2);
   --background-modifier-success: rgba(60, 131, 93, 0.16);
-  --background-modifier-message: rgba(243, 240, 223, 0.94);
+  --background-modifier-message: rgba(247, 239, 208, 0.94);
   --tooltip-background: #244e41;
   --tooltip-text: #f8f7dd;
   --text-normal: #253b33;
@@ -247,12 +247,12 @@ body {
   --text-on-accent-inverted: #154033;
   --text-error: #c34729;
   --text-success: #347b51;
-  --text-warning: #8f8b0c;
+  --text-warning: #756f0a;
   --text-selection: rgba(84, 158, 106, 0.26);
   --text-highlight-bg: rgba(196, 164, 26, 0.2);
   --text-highlight-bg-active: rgba(196, 164, 26, 0.32);
-  --interactive-normal: #e6e5d0;
-  --interactive-hover: #d8dec9;
+  --interactive-normal: #ebe2c3;
+  --interactive-hover: #ddd6b8;
   --interactive-accent: #398667;
   --interactive-accent-hover: #2c7356;
   --interactive-accent-rgb: 60, 131, 93;
@@ -267,8 +267,8 @@ body {
   --h2-color: #3c7859;
   --h3-color: #137278;
   --h4-color: #a74365;
-  --h5-color: #8f8b0c;
-  --h6-color: #8c6736;
+  --h5-color: #756f0a;
+  --h6-color: #805a2f;
   --bold-color: #154033;
   --italic-color: #3b6a5f;
   --inline-title-color: #215149;
@@ -284,7 +284,7 @@ body {
   --tag-background: rgba(180, 105, 52, 0.12);
   --tag-background-hover: rgba(180, 105, 52, 0.21);
   --code-normal: #224e46;
-  --code-background: #dfe6d4;
+  --code-background: #e3e1ca;
   --code-comment: #516b65;
   --code-function: #227658;
   --code-important: #b43f60;
@@ -305,9 +305,9 @@ body {
   --list-marker-color: #398667;
   --list-marker-color-hover: #137278;
   --list-marker-color-collapsed: #8f8b0c;
-  --table-header-background: #e0e2cd;
-  --table-header-background-hover: #d6dbc6;
-  --table-row-alt-background: rgba(215, 214, 195, 0.5);
+  --table-header-background: #e9dfbf;
+  --table-header-background-hover: #ddd3b5;
+  --table-row-alt-background: rgba(221, 211, 181, 0.52);
   --table-row-background-hover: rgba(60, 131, 93, 0.08);
 
   --nav-item-color: #587168;
@@ -317,24 +317,24 @@ body {
   --nav-item-background-hover: rgba(60, 131, 93, 0.07);
   --nav-collapse-icon-color: #809388;
   --nav-collapse-icon-color-collapsed: #809388;
-  --nav-indentation-guide-color: #c0c9b5;
+  --nav-indentation-guide-color: #c5c2a6;
 
-  --titlebar-background: #e6e5d0;
-  --titlebar-background-focused: #e6e5d0;
-  --ribbon-background: #e6e5d0;
-  --divider-color: #c0c9b5;
+  --titlebar-background: #ebe2c3;
+  --titlebar-background-focused: #ebe2c3;
+  --ribbon-background: #ebe2c3;
+  --divider-color: #c5c2a6;
   --divider-color-hover: #398667;
-  --tab-container-background: #e6e5d0;
+  --tab-container-background: #ebe2c3;
   --tab-text-color: #637d71;
   --tab-text-color-active: #164033;
   --tab-text-color-focused: #334b41;
   --tab-text-color-focused-active: #164033;
-  --tab-outline-color: #c0c9b5;
+  --tab-outline-color: #c5c2a6;
 
   --scrollbar-bg: transparent;
-  --scrollbar-thumb-bg: #c0c9b5;
-  --scrollbar-active-thumb-bg: #90a697;
-  --indentation-guide-color: #c0c9b5;
+  --scrollbar-thumb-bg: #c5c2a6;
+  --scrollbar-active-thumb-bg: #989f84;
+  --indentation-guide-color: #c5c2a6;
   --indentation-guide-color-active: #398667;
 
   --graph-line: #a7b8a7;
@@ -344,13 +344,13 @@ body {
   --graph-node-attachment: #a74365;
   --graph-node-unresolved: #c34729;
 
-  --mm-mermaid-canvas: #eeefdb;
-  --mm-mermaid-node-bg: #dfe6d4;
+  --mm-mermaid-canvas: #f3ebcf;
+  --mm-mermaid-node-bg: #e3e1ca;
   --mm-mermaid-node-border: #398667;
   --mm-mermaid-node-text: #164033;
   --mm-mermaid-line: #587168;
   --mm-mermaid-accent: #20766f;
-  --mm-mermaid-label-bg: #f4f3de;
+  --mm-mermaid-label-bg: #f7efd0;
 }
 
 /* Quiet chrome with a thin jade signal for the current context. */
@@ -858,13 +858,13 @@ body.theme-dark .mermaid > svg {
 }
 
 .theme-light .mermaid {
-  --mm-mermaid-canvas: #eeefdb;
-  --mm-mermaid-node-bg: #dfe6d4;
+  --mm-mermaid-canvas: #f3ebcf;
+  --mm-mermaid-node-bg: #e3e1ca;
   --mm-mermaid-node-border: #398667;
   --mm-mermaid-node-text: #164033;
   --mm-mermaid-line: #587168;
   --mm-mermaid-accent: #20766f;
-  --mm-mermaid-label-bg: #f4f3de;
+  --mm-mermaid-label-bg: #f7efd0;
 }
 
 body .mermaid {
